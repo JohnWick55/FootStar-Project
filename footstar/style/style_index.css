@@ -1,0 +1,246 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    background-color:#2C2E43;
+}
+body{
+    background-color:#2C2E43!important;;
+    font-family: 'Inter', sans-serif;
+}
+a:link, a:active, a:visited, a:hover{
+    text-decoration: none;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 6.5vh;
+    background-color: black;
+    padding-top: 9px;
+}
+ul{
+    display:flex;
+    justify-content: space-around;
+    width:40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 10;
+    margin-left: 250px;
+}
+li{
+    display: inline-block;
+    margin-right: 130px;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 700;
+    color: whitesmoke;
+}
+li a{
+    color: whitesmoke;
+}
+li a:hover{
+    text-decoration: none;
+    color: #D88A16;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+nav .burger{
+    display: none;
+    top: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    z-index: 12;
+}
+.line1, .line2, .line3{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+/* Banner */
+.banner-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+}
+.element-text{
+    margin-top: 22.59vh;
+    text-align: center;
+    /* border: 1px solid green; */
+}
+.element-text h1{
+    color: #D88A16;
+    font-size: calc(2vw + 2vh + 0.9vmin);
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.element-text p{
+    font-size: calc(1.5vw + 1.5vh + 1vmin);
+    color: rgb(224, 220, 220);
+    font-weight: 600;
+    line-height: 6.83vh;
+}
+
+/* Content */
+.lil-nas{
+    margin-top: 400px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+}
+.lilnas-img{
+    width: 450px;
+    height: auto;
+}
+.shop{
+    margin-top: 400px;
+    display: grid;
+    gap: 70px;
+    grid-template-columns: auto auto;
+}
+.shop-img{
+    width: 550px;
+    border-radius: 10%;
+    height: auto;
+    margin-top: 110px;
+}
+.shop .element-text{
+    margin-top: 140px;
+}
+.shop .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    grid-column: 1 / 3;
+    gap: 100px;
+    grid-template-columns: subgrid;
+}
+.shop .buttons .bttn
+{
+    border: 2px solid #D88A16;
+    border-radius: 18px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #D88A16;
+    font-size: 24px;
+    font-weight: bold;
+}
+.shop .buttons .bttn:hover{
+    text-decoration: none;
+    background-color: #D88A16;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+/* Cards */
+.card{
+    margin-top: 30px;
+}
+
+/* Footer */
+footer{
+    margin-top: 400px;
+    height: 250px;
+    background-color: black;
+    display: flex!important;
+    justify-content: center;
+    gap: 100px;
+    color: rgb(224, 220, 220);
+    text-align: center;
+}
+footer h1{
+    padding-top: 30px;
+}
+footer p{
+    font-size: 22px;
+    line-height: 40px;
+}
+@media screen and (max-width:1200px){
+    .banner-img{
+        /* display: none; */
+        width: 600px;
+    }
+    .lil-nas .lilnas-img{
+        width: 350px; 
+    }
+    .shop-img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:840px){
+    body{
+        overflow-x: hidden!important;
+    }
+    .banner-img{
+        /* display: none; */
+        width: 400px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .element-text{
+        margin-top: 25%;
+    }
+    nav .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+    }
+    nav .burger
+    {
+        display: block;
+    }
+    .lil-nas{
+        margin-top: 150px;
+    }
+    .lil-nas .lilnas-img{
+        width: 250px; 
+    }
+    .shop{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .shop-img{
+        width: 400px;
+        margin-top: 6px;
+    }
+    .buttons .bttn{
+        font-size: 17px!important;
+    }
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer p{
+        font-size: 15px;
+    }
+    footer h1{
+        font-size: 30px;
+    }
+}
